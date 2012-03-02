@@ -1,0 +1,61 @@
+<!DOCTYPE HTML>
+<html> <head>
+<title>html5 game chapter 1</title>
+<script language="javascript"
+src="http://code.jquery.com/jquery-1.7.1.min.js"></script> 
+<script language="javascript" src="js/c1.js"></script>
+<script language="javascript">
+var keys = { canvas: '#mycanvas' 
+	     , audio: '#myaudio' 
+	     , socket : { log : '#log' , clearLog : '#clearLog' , message : '#message' 
+			  , echoNow : '#echoNow' , url : 'ws://echo.websocket.org' }
+	     , storage: { store : { key : '#storeKey' , value : '#storeValue' , click : '#storeNow' }
+			  , retrieve : { key : '#retrieveKey' , value : '#retrieveValue' , click: '#retrieveNow' } }
+	   };
+$('body').ready(function () { runMe(keys); }); 
+</script>
+</head>
+<body>
+<p>This version does not have html5 polyfill for IE - i.e. won't work
+on IE at all...</p>
+<h2>Canvas - a smiley face</h2>
+<canvas id="mycanvas" width="200" height="200"></canvas>
+<h2>Audio</h2>
+<p>From <a href="http://funfunfunmedia.com/music/free-music-downloads/classical-music">http://funfunfunmedia.com/music/free-music-downloads/classical-music</a></p>
+
+<audio controls id="myaudio">
+<source
+src="http://cdn.music2ten.com/mp3/VassilyPrimakov-PianoConcertoNo24inCMinor1.mp3"
+/>
+</audio>
+<h2>Web Socket</h2>
+<p>Using <a
+href="http://websocket.org/echo.html">http://websocket.org/echo.html</a>
+for an example live echo server</p>
+<div>
+  <p>Server: ws://echo.websocket.org</p>
+  <p>Message</p>
+  <input id="message" value="Type something in here" />
+  <input type="button" id="echoNow" value="Echo Now" />
+  <p>Log</p>
+  <div id="log" width="300" height="500"></div>
+  <input type="button" id="clearLog" value="Clear Log" />
+</div>
+
+<h2>Web Storage</h2>
+<p>Add to Web Storage with using the key/value fields below</p>
+<table>
+  <tr><td>key</td><td><input id='storeKey' value='sampleKey' /></td></tr>
+  <tr><td>value</td><td><input id='storeValue' value='sampleValue'
+    /></td></tr>
+    <tr><td colspan="2"><input type="button" id="storeNow"
+      value="Store Now" /></td></tr>
+</table>
+<p>Use the following to retrieve from Web Storage</p>
+<table>
+  <tr><td>key</td><td><input id='retrieveKey' value='sampleKey' /></td></tr>
+    <tr><td colspan="2"><input type="button" id="retrieveNow"
+      value="Retrieve Now" /></td></tr>
+  <tr><td>value</td><td><div id="retrieveValue"></div></td></tr>
+</table>
+</body> </html>

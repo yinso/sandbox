@@ -1,0 +1,3 @@
+[submodule "html5_games/bzjs"]
+	path = html5_games/bzjs
+	url = https://bzlib@github.com/bzlib/bzjs.git
