@@ -12,3 +12,6 @@ The game logic has not been implemented.
 
 The code is currently not cross browser - it will only work in Chrome for now. 
 
+You can find the [source code from the book in this link](http://www.wiley.com/WileyCDA/WileyTitle/productCd-1119975085,descCd-DOWNLOAD.html).
+
+
