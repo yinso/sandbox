@@ -1,37 +1,40 @@
 
-var game = {
+var Game = bzj.Class({
     screenDisplayed : '' // default there is no screen showing in the beginning... 
     , showScreen : function (screenID) {
+	var self = this; 
 	// make sure the other ones are hidden... we are showing one screen at a time... 
 	// see which screen is shown - if it's not the same as the currently shown screen, show it. 
-	if (screenID != game.screenDisplayed) {
-	    if (game.screenDisplayed != '') {
-		$('#' + game.screenDisplayed).hide();
+	if (screenID != self.screenDisplayed) {
+	    if (self.screenDisplayed != '') {
+		$('#' + self.screenDisplayed).hide();
 	    }
 	    $('#' + screenID).show('slow'); 
-	    game.screenDisplayed = screenID; 
+	    self.screenDisplayed = screenID; 
 	} // otherwise do nothing. 
     }
-    , setup : function () {
+    , init : function () {
+	var self = this; 
 	// setup splash-screen... 
 	$('#continue-btn').click(function() { 
-	    game.showScreen('main-menu'); 
+	    self.showScreen('main-menu'); 
 	}); 
 	// setup main-screen... 
 	$('#game-screen-btn').click(function() {
-	    game.showScreen('game-screen'); 
+	    self.showScreen('game-screen'); 
 	});
 	$('#high-score-btn').click(function() {
-	    game.showScreen('high-scores'); 
+	    self.showScreen('high-scores'); 
 	}); 
 	$('#about-btn').click(function() {
-	    game.showScreen('about'); 
+	    self.showScreen('about'); 
 	}); 
 	$('#exit-screen-btn').click(function() {
-	    game.showScreen('exit-screen'); 
+	    self.showScreen('exit-screen'); 
 	}); 
 	// show splash-screen 
-	game.showScreen('splash-screen'); 
+	self.showScreen('splash-screen'); 
+	console.log('game initialized...'); 
     }
     , screens : {
     }
@@ -41,8 +44,10 @@ var game = {
 	, baseScore : 100 
 	, numJewelTypes : 7 
     }
-}; 
 
-game.setup(); 
+}); 
 
+var game = new Game(); 
+
+// game.setup(); // should automatically be called. 
 
