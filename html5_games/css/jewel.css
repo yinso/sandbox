@@ -112,3 +112,32 @@ ul.menu li button:active {
     } 
 }
 
+.jewel-size {
+    font-size: 1em; /* this apparently controls the size of the Jewel... */ 
+}
+
+#jewel-proto {
+    position: absolute;
+    width : 1em; 
+    height : 1em;
+    left : -1000px; 
+    /* display : none; */
+}
+
+#game-screen .game-board {
+    position: relative;
+    width : 8em; 
+    height : 8em; 
+}
+
+.jewel {
+    position: absolute; 
+    width: 1em; 
+    height: 1em; 
+    overflow: hidden; 
+    /* border: 1px grey solid; */ 
+}
+
+.jewel:hover {
+    border: 1px red solid; 
+}

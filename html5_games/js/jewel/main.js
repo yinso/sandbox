@@ -1,9 +1,6 @@
-/* bzj.module('game' */
-
-// /* in firefox yepnope is not yet defined here... 
 yepnope([
     {
-	load : "http://code.jquery.com/jquery-1.7.1.min.js"
+	load : "http://code.jquery.com/jquery-1.7.1.js"
 	, complete : function () {
 	    console.log('jquery 1.7.1 loaded'); 
 	}

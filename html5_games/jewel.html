@@ -9,11 +9,14 @@
 <!-- default css --> 
 <link rel="stylesheet" type="text/css" href="css/jewel.css" />
 <script language="javascript" src="js/yepnope/yepnope.1.5.3-min.js"></script>
-<script language="javascript" src="js/jewel/jewel.js"></script>
+<script language="javascript" src="js/jewel/main.js"></script>
 </head>
 <body>
 <div id="game">
   <!-- game goes here -->
+  <div id="jewel-proto" class="jewel-size">
+    <img src="img/jewels40.png" /> 
+  </div> 
   <div class="screen" id="splash-screen">
     <h1>Jewel <br/>Warrior</h1>
     <!-- this is not a sound UI design... best to have an animated gif -->
@@ -31,6 +34,8 @@
   </div>
   <div class="screen" id="game-screen">
     <h2>Play Game</h2>
+    <div class="game-board jewel-size" id="board">
+    </div>
   </div>
   <div class="screen" id="high-scores">
     <!-- <h2 class="logo">Jewel <br/>Warrior</h2> -->
