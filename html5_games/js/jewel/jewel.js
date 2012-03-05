@@ -9,7 +9,7 @@ yepnope([
 	}
     }
     , {
-	load : "bzjs/base.js"
+	load : "js/bzj/base.js"
 	, complete : function () {
 	    console.log('bzjs base.js loaded');
 	    yepnope([
