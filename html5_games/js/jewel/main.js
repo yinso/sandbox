@@ -6,7 +6,7 @@ yepnope([
 	}
     }
     , {
-	load : "js/bzj/base.js"
+	load : ["js/bzj/base.js", "js/bzj/timer.js"]
 	, complete : function () {
 	    console.log('bzjs base.js loaded');
 	    yepnope([

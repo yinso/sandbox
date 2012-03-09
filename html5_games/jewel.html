@@ -9,7 +9,14 @@
 <!-- default css --> 
 <link rel="stylesheet" type="text/css" href="css/jewel.css" />
 <script language="javascript" src="js/yepnope/yepnope.1.5.3-min.js"></script>
-<script language="javascript" src="js/jewel/main.js"></script>
+<!-- <script language="javascript" src="js/jewel/main.js"></script> -->
+<!-- -->
+
+<script language="javascript" src="http://code.jquery.com/jquery-1.7.1.js"></script>
+<script language="javascript" src="js/bzj/base.js"></script>
+<script language="javascript" src="js/bzj/timer.js"></script>
+<script language="javascript" src="js/sprintf.js"></script>
+<script language="javascript" src="js/jewel/game.js"></script>
 </head>
 <body>
 <div id="game">
@@ -34,8 +41,12 @@
   </div>
   <div class="screen" id="game-screen">
     <h2>Play Game</h2>
+    
     <div class="game-board jewel-size" id="board">
     </div>
+    <ul class="menu">
+      <li><button id="reshuffle-btn" class="button">Reshuffle</button></li>
+    </ul>
   </div>
   <div class="screen" id="high-scores">
     <!-- <h2 class="logo">Jewel <br/>Warrior</h2> -->

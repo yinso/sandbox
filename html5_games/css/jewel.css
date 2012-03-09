@@ -48,11 +48,11 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-    font-size : 1.5em; 
+    font-size : 1.3em; 
 }
 
 h2 {
-    font-size : 1.2em;
+    font-size : 1.1em;
 }
 
 h3 {
@@ -135,9 +135,49 @@ ul.menu li button:active {
     width: 1em; 
     height: 1em; 
     overflow: hidden; 
-    /* border: 1px grey solid; */ 
+}
+
+.jewel a {
+    display: block; 
 }
 
 .jewel:hover {
     border: 1px red solid; 
+}
+
+.cell-selected {
+    /* border: 1px blue solid; */
+    background-color: #7777aa; 
+} 
+
+.cell-highlighted {
+    background-color: #aa7777; 
+}
+
+.highlight-0 { /* green */ 
+    background-color: #33ff33; 
+}
+
+.highlight-1 { /* red */
+    background-color: #ff3333;
+}
+
+.highlight-2 { /* magenta */ 
+    background-color: #ffaaaa; 
+}
+
+.highlight-3 { /* white */
+    background-color: #888888; 
+}
+
+.highlight-4 { /* blue */
+    background-color: #3333ff; 
+}
+
+.highlight-5 { /* orange */
+    background-color: #ff33ff; 
+}
+
+.highlight-6 { /* yellow */ 
+    background-color: #ffff33; 
 }
